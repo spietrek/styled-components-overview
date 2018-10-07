@@ -1,0 +1,165 @@
+export { dark as theme } from 'mdx-deck/themes'
+import { CodeSurfer } from "mdx-deck-code-surfer"
+import { Invert, Split } from 'mdx-deck/layouts'
+import { Image } from 'mdx-deck'
+import Demo1 from './components/demo1'
+import Demo6 from './components/demo6'
+
+# Overview of styled-components
+
+---
+
+# About Me
+
+* My name is Steve Pietrek
+* Work for Cardinal Solutions in Raleigh, NC
+* App Dev Practice Manager
+* Front End Developer
+* Twitter: @spietrek
+
+---
+
+<Image src="images/styled-components-evolution.png" size="50% 50%"/>
+
+---
+
+export default Split
+
+# Installation
+
+### npm install styled-components
+### yarn install styled-components
+
+---
+
+<CodeSurfer
+  title="Basics - Template Literal"
+  notes="Use ⬆️ and ⬇️ keys"
+  code={require("raw-loader!./snippets/2a.mdxx")}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { notes: "⬇️" },
+    { lines: [2], notes: "Import styled-components" },
+    { range: [4, 8], notes: "Styling a h1" },
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="Basics - Style Object"
+  notes="Use ⬆️ and ⬇️ keys"
+  code={require("raw-loader!./snippets/2b.mdxx")}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { notes: "⬇️" },
+    { lines: [2], notes: "Import styled-components" },
+    { range: [4, 8], notes: "Styling a h1" },
+  ]}
+/>
+
+---
+
+# Passing Props
+
+---
+
+# Adding Additional Props
+
+---
+
+<CodeSurfer
+  title="Extending Styles"
+  notes="Use ⬆️ and ⬇️ keys"
+  code={require("raw-loader!./snippets/5.mdxx")}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { notes: "⬇️" },
+    { lines: [2], notes: "Import styled-components" },
+    { range: [4, 8], notes: "Styling a h1" },
+    { range: [10, 13], notes: "Extending Title" }
+  ]}
+/>
+
+---
+export default Split
+
+# Avoid Duplicate Styles
+
+<Demo6 />
+
+---
+
+<CodeSurfer
+  title="Avoid Duplicate Styles"
+  notes="Use ⬆️ and ⬇️ keys"
+  code={require("raw-loader!./snippets/6.mdxx")}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { notes: "⬇️" },
+    { lines: [2], notes: "Import styled-components (with css)" },
+    { range: [3, 9], notes: "Import React Icons" },
+    { range: [13, 17], notes: "Create base style" },
+    { range: [18, 36], notes: "Extend base style" }
+  ]}
+/>
+
+---
+
+<Demo1 />
+
+---
+
+# Pseudo Classes
+
+---
+
+# Media Templates
+
+---
+
+# Animations
+
+---
+
+# Tools/Resources
+
+---
+
+# Polished
+
+* A lightweight toolset for writing styles in JavaScript
+* Not limitd to styled-components
+* https://polished.js.org/
+* Mixins, Colors, Shorthands, Helpers, and Types
+
+---
+
+# Awesome Styled Components
+
+### A collection of awesome styled-components resources
+### https://github.com/styled-components/awesome-styled-components
+
+---
+
+# 9 Styled-Components UI Libraries
+
+* Rebass
+* Zendesk’s Garden React components
+* Atlaskit
+* Grommet V2
+* Smooth-UI
+* Reactackle
+* Reakit
+* React CSS loaders and Styled loaders
+* Styled icons
+
+---
+
+# Thank you for attending
+
+---
