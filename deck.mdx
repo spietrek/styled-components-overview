@@ -8,6 +8,7 @@ import DemoExtend from './components/DemoExtend'
 import DemoPseudoClasses from './components/DemoPseudoClasses'
 import DemoAvoidDupeCode from './components/DemoAvoidDupeCode'
 import DemoClock from './components/DemoClock'
+import DemoPolished from './components/DemoPolished'
 
 <Head>
   <title>Getting Started with styled-components in ReactJS</title>
@@ -234,7 +235,7 @@ yarn add styled-components
     { lines: [2], notes: "Import styled-components" },
     { range: [4, 8], notes: "Style a h1" },
     { range: [10, 13], notes: "Style a section" },
-    { range: [16, 24], notes: "Use styles" },
+    { range: [16, 24], notes: "Use the styled components" },
   ]}
 />
 
@@ -250,7 +251,7 @@ yarn add styled-components
     { notes: "⬇️" },
     { lines: [2], notes: "Import styled-components" },
     { range: [4, 8], notes: "Style a h1" },
-    { range: [12, 20], notes: "Use the h1 style" },
+    { range: [12, 20], notes: "Use the styled components" },
   ]}
 />
 
@@ -271,9 +272,9 @@ yarn add styled-components
   steps={[
     { notes: "⬇️" },
     { lines: [2], notes: "Import styled-components" },
-    { range: [4, 8], notes: "Styling a h1" },
+    { range: [4, 8], notes: "Style a h1" },
     { range: [10, 14], notes: "Extend a style" },
-    { range: [22, 31], notes: "Use the styles" },
+    { range: [22, 31], notes: "Use the styled components" },
   ]}
 />
 
@@ -318,7 +319,7 @@ yarn add styled-components
     { notes: "⬇️" },
     { lines: [2], notes: "Import styled-components" },
     { range: [4, 12], notes: "Define hover pseudo class" },
-    { range: [19, 27], notes: "Use the style" },
+    { range: [19, 27], notes: "Use the styled component" },
   ]}
 />
 
@@ -334,11 +335,60 @@ yarn add styled-components
 
 ---
 
-# Mixins
+<CodeSurfer
+  title="Passing Props"
+  notes="Use ⬆️ and ⬇️ keys"
+  code={require("raw-loader!./snippets/DemoClock.mdxx")}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { notes: "⬇️" },
+    { lines: [3], notes: "Import styled-components" },
+    { range: [59, 70], notes: "Style button" },
+    { range: [163, 185], notes: "Use the styled components" },
+  ]}
+/>
 
 ---
 
-# Animations
+<CodeSurfer
+  title="Themes"
+  notes="Use ⬆️ and ⬇️ keys"
+  code={require("raw-loader!./snippets/DemoClock.mdxx")}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { notes: "⬇️" },
+    { lines: [3], notes: "Import styled-components" },
+    { range: [6, 12], notes: "Define theme" },
+    { range: [40, 51], notes: "Create styled clock block" },
+    { range: [127, 133], notes: "Use the styled component" },
+  ]}
+/>
+
+---
+
+# Animation and Mixins
+
+<DemoClock />
+
+---
+
+<CodeSurfer
+  title="Animation and Mixins"
+  notes="Use ⬆️ and ⬇️ keys"
+  code={require("raw-loader!./snippets/DemoClock.mdxx")}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { notes: "⬇️" },
+    { lines: [3], notes: "Import styled-components" },
+    { range: [26, 34], notes: "Create keyframes style" },
+    { range: [36, 38], notes: "Create animation mixin" },
+    { range: [40, 51], notes: "Create styled clock block" },
+    { range: [127, 133], notes: "Use the styled component" },
+  ]}
+/>
 
 ---
 
@@ -348,6 +398,30 @@ yarn add styled-components
 * Not limitd to styled-components
 * https://polished.js.org/
 * Mixins, Colors, Shorthands, Helpers, and Types
+
+---
+
+# Polished
+
+<DemoPolished />
+
+---
+
+<CodeSurfer
+  title="Polished"
+  notes="Use ⬆️ and ⬇️ keys"
+  code={require("raw-loader!./snippets/DemoPolished.mdxx")}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { notes: "⬇️" },
+    { lines: [3], notes: "Import Polished" },
+    { range: [10, 12], notes: "Lighten text example" },
+    { range: [14, 16], notes: "Ellipsis text example" },
+    { range: [18, 20], notes: "Word wrap text example" },
+    { range: [28, 45], notes: "Use the styled components" },
+  ]}
+/>
 
 ---
 
