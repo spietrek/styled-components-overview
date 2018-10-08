@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const StyledTitle = styled.h1({
-  fontSize: '1.5em',
-  textAlign: 'center',
-  color: 'palevioletred',
-});
+const StyledTitle = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
 
-...
+const StyledWrapper = styled.section`
+  padding: 4em;
+  background: ${props => (props.primary ? 'white' : 'papayawhip')};
+`;
 
 class DemoBasics extends Component {
   render() {

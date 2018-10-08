@@ -53,7 +53,7 @@ const CogIconLink = styled(FaCog)`
   ${BaseIconLink};
 `;
 
-const Demo6 = () => (
+const DemoAvoidDupeCode = () => (
   <StyledSidebar>
     <NavMenu>
       <NavListItem>
@@ -80,4 +80,4 @@ const Demo6 = () => (
   </StyledSidebar>
 );
 
-export default Demo6;
+export default DemoAvoidDupeCode;

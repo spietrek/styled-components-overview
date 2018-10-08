@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const StyledTitle = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
+  font-size: 2.5em;
+  color: red;
+  &:hover {
+    text-shadow: 2px 2px #999999;
+    cursor: pointer;
+    text-decoration: underline;
+  }
 `;
 
 const StyledWrapper = styled.section`
@@ -12,7 +16,7 @@ const StyledWrapper = styled.section`
   background: ${props => (props.primary ? 'white' : 'papayawhip')};
 `;
 
-class DemoBasics extends Component {
+class DemoPseudoClasses extends Component {
   render() {
     return (
       <StyledWrapper>
@@ -22,4 +26,4 @@ class DemoBasics extends Component {
   }
 }
 
-export default DemoBasics;
+export default DemoPseudoClasses;

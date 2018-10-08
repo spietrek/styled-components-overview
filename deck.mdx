@@ -3,35 +3,34 @@ import { Invert, Split } from 'mdx-deck/layouts'
 import { CodeSurfer } from "mdx-deck-code-surfer"
 export { default as theme } from './theme'
 
-import Demo1 from './components/Demo1'
-import Demo6 from './components/Demo6'
-import LiveCode from 'components/LiveCode'
+import DemoBasics from './components/DemoBasics'
+import DemoExtend from './components/DemoExtend'
+import DemoPseudoClasses from './components/DemoPseudoClasses'
+import DemoAvoidDupeCode from './components/DemoAvoidDupeCode'
+import DemoClock from './components/DemoClock'
 
 <Head>
-  <title>Overview of styled-components in ReactJS</title>
+  <title>Getting Started with styled-components in ReactJS</title>
 </Head>
 
-# Overview of styled-components in ReactJS
-
-<br />
-
-### Connect.Tech 2018
+<Image src="images/qrcode.png" size="55% 90%"/>
 
 ---
 
-<LiveCode />
+# Getting Started with styled-components in ReactJS
+## &lt; 💅 &gt;
+## Connect.Tech 2018
+## @spietrek
 
 ---
 
 # About Me
 
-<Appear>
-  <h2>My name is Steve Pietrek</h2>
-  <h2>Work for Cardinal Solutions in Raleigh, NC</h2>
-  <h2>App Dev Practice Manager</h2>
-  <h2>Front End Developer</h2>
-  <h2>Twitter: @spietrek</h2>
-</Appear>
+## My name is Steve Pietrek
+## Work for Cardinal Solutions in Raleigh, NC
+## App Dev Practice Manager
+## Front End Developer
+## Twitter: @spietrek
 
 ---
 
@@ -45,6 +44,7 @@ import LiveCode from 'components/LiveCode'
 * Bottom line, since they don’t care about how things look, they don’t care to learn CSS. They should.
 * Developers should learn CSS to know how an application should be styled and provide responsive and accessibility support.
 
+<br />
 
 > __*CSS is hard. It can take years to be proficient.*__
 
@@ -52,36 +52,35 @@ import LiveCode from 'components/LiveCode'
 
 # CSS Challenges
 
-1. Quicky language
-2. Designed for documents not apps
-3. Global Namespace
-4. Hardly reusable
-5. Non-programmatic
-6. Non-modular
-7. CSS development too slow
-8. Styling conflicts
-9. Dead code
+1. Quirky language
+2. Global namespace
+3. Hardly reusable
+4. Non-programmatic
+5. Non-modular
+6. CSS development too slow
+7. Styling conflicts
+8. Dead code
+
+### Preprocessors help (LESS, Sass, CSS Modules), but don't solve all issues.
 
 ---
 
 # Component Based Design
 
-### Split UI into small, more manageable parts.
-### React is structured around components.
-### Isolating components and states allow developers to articulate behavior and functionality.
-### Based on Atomic Design.
+1. Split UI into small, more manageable parts.
+2. Based on Atomic Design.
+3. Isolating components and states allow developers to articulate behavior and functionality.
+4. React is structured around components.
 
 ---
 
 # Atomic Design ( Brad Frost)
 
-<Appear>
-  <ol>Atoms - Are the basic building blocks of matter.</ol>
-  <ol>Molecules - Groups of atoms bonded together and are the smallest fundamental units of a compound.</ol>
-  <ol>Organisms - Groups of molecules joined together to form a relatively complex, distinct section of an interface.</ol>
-  <ol>Templates - Consist mostly of groups of organisms stitched together to form pages.</ol>
-  <ol>Pages - Specific instances of templates.</ol>
-</Appear>
+1. Atoms - Are the basic building blocks of matter.
+2. Molecules - Groups of atoms bonded together and are the smallest fundamental units of a compound.
+3. Organisms - Groups of molecules joined together to form a relatively complex, distinct section of an interface.
+4. Templates - Consist mostly of groups of organisms stitched together to form pages.
+5. Pages - Specific instances of templates.
 
 ---
 
@@ -122,6 +121,7 @@ const divStyle = {
   margin: '40px',
   border: '5px solid pink'
 };
+
 const pStyle = {
   fontSize: '15px',
   textAlign: 'center'
@@ -155,6 +155,14 @@ export default DashedBox;
 
 ---
 
+> "CSS-in-JS" refers to a pattern where CSS is composed using JavaScript instead of defined in external files.
+
+<br />
+
+## - ReactJS Docs
+
+---
+
 # CSS-in-JS Benefits
 
 1. Scoped styles without selectors. Unique class names are created to avoid collisions.
@@ -166,7 +174,16 @@ export default DashedBox;
 
 <br />
 
-### - Christopher Chedeau, a.k.a. vjeux
+## - Christopher Chedeau, a.k.a. vjeux
+
+---
+
+# Component Reusability
+
+1. Always look for ways to reuse code between projects.
+2. UI components are often designed with reusability in mind.
+3. Code (including styles) is packaged together to make sharing easier and avoid unused code bloat.
+4. Bit allows sharing components code between projects. All components are organized on the cloud, made discoverable, and synced in all your projects.
 
 ---
 
@@ -174,34 +191,40 @@ export default DashedBox;
 
 ---
 
-# styled-components Benefits
-
-### Use as as much or as little as you want
-### Use your favorite UI framework and add styled-components on top
-### Defining styled components that possess their own encapsulated styles
-
----
-
 > The basic idea of styled-components is to enforce best practices by removing the mapping between styles and components.
 
 <br />
 
-### - Max Stoiber
-
+## - Max Stoiber
 
 ---
 
-export default Split
+# styled-components Benefits
+
+1. Use as as much or as little as you want
+2. Use your favorite UI framework and add styled-components on top
+3. Defining styled components that possess their own encapsulated styles
+4. Better Developer Experience (DX)
+
+---
 
 # Installation
 
-### npm install styled-components
-### yarn install styled-components
+```
+npm install styled-components
+yarn add styled-components
+```
+
+---
+
+# Basics
+
+<DemoBasics />
 
 ---
 
 <CodeSurfer
-  title="Basics - Template Literal"
+  title="Template Literal"
   notes="Use ⬆️ and ⬇️ keys"
   code={require("raw-loader!./snippets/2a.mdxx")}
   showNumbers={false}
@@ -209,14 +232,16 @@ export default Split
   steps={[
     { notes: "⬇️" },
     { lines: [2], notes: "Import styled-components" },
-    { range: [4, 8], notes: "Styling a h1" },
+    { range: [4, 8], notes: "Style a h1" },
+    { range: [10, 13], notes: "Style a section" },
+    { range: [16, 24], notes: "Use styles" },
   ]}
 />
 
 ---
 
 <CodeSurfer
-  title="Basics - Style Object"
+  title="Style Object"
   notes="Use ⬆️ and ⬇️ keys"
   code={require("raw-loader!./snippets/2b.mdxx")}
   showNumbers={false}
@@ -224,47 +249,46 @@ export default Split
   steps={[
     { notes: "⬇️" },
     { lines: [2], notes: "Import styled-components" },
-    { range: [4, 8], notes: "Styling a h1" },
+    { range: [4, 8], notes: "Style a h1" },
+    { range: [12, 20], notes: "Use the h1 style" },
   ]}
 />
 
 ---
 
-# Passing Props
+# Extending Styles
 
----
-
-# Adding Additional Props
+<DemoExtend />
 
 ---
 
 <CodeSurfer
   title="Extending Styles"
   notes="Use ⬆️ and ⬇️ keys"
-  code={require("raw-loader!./snippets/5.mdxx")}
+  code={require("raw-loader!./snippets/DemoExtend.mdxx")}
   showNumbers={false}
   dark={false}
   steps={[
     { notes: "⬇️" },
     { lines: [2], notes: "Import styled-components" },
     { range: [4, 8], notes: "Styling a h1" },
-    { range: [10, 13], notes: "Extending Title" }
+    { range: [10, 14], notes: "Extend a style" },
+    { range: [22, 31], notes: "Use the styles" },
   ]}
 />
 
 ---
-export default Split
 
 # Avoid Duplicate Styles
 
-<Demo6 />
+<DemoAvoidDupeCode />
 
 ---
 
 <CodeSurfer
   title="Avoid Duplicate Styles"
   notes="Use ⬆️ and ⬇️ keys"
-  code={require("raw-loader!./snippets/6.mdxx")}
+  code={require("raw-loader!./snippets/DemoAvoidDupeCode.mdxx")}
   showNumbers={false}
   dark={false}
   steps={[
@@ -272,17 +296,31 @@ export default Split
     { lines: [2], notes: "Import styled-components (with css)" },
     { range: [3, 9], notes: "Import React Icons" },
     { range: [13, 17], notes: "Create base style" },
-    { range: [18, 36], notes: "Extend base style" }
+    { range: [18, 36], notes: "Extend base style" },
   ]}
 />
 
 ---
 
-<Demo1 />
+# Pseudo Classes
+
+<DemoPseudoClasses />
 
 ---
 
-# Pseudo Classes
+<CodeSurfer
+  title="Pseudo Classes"
+  notes="Use ⬆️ and ⬇️ keys"
+  code={require("raw-loader!./snippets/DemoPseudoClasses.mdxx")}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { notes: "⬇️" },
+    { lines: [2], notes: "Import styled-components" },
+    { range: [4, 12], notes: "Define hover pseudo class" },
+    { range: [19, 27], notes: "Use the style" },
+  ]}
+/>
 
 ---
 
@@ -290,11 +328,17 @@ export default Split
 
 ---
 
-# Animations
+# Passing Props
+
+<DemoClock />
 
 ---
 
-# Tools/Resources
+# Mixins
+
+---
+
+# Animations
 
 ---
 
@@ -328,6 +372,10 @@ export default Split
 
 ---
 
-# Thank you for attending
+export default Split
+
+## Thank you for attending (@spietrek)
+
+![](images/qrcode.png)
 
 ---
