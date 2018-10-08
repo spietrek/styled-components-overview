@@ -1,25 +1,193 @@
-export { dark as theme } from 'mdx-deck/themes'
-import { CodeSurfer } from "mdx-deck-code-surfer"
+import { Head, Appear, Image } from 'mdx-deck'
 import { Invert, Split } from 'mdx-deck/layouts'
-import { Image } from 'mdx-deck'
-import Demo1 from './components/demo1'
-import Demo6 from './components/demo6'
+import { CodeSurfer } from "mdx-deck-code-surfer"
+export { default as theme } from './theme'
 
-# Overview of styled-components
+import Demo1 from './components/Demo1'
+import Demo6 from './components/Demo6'
+import LiveCode from 'components/LiveCode'
+
+<Head>
+  <title>Overview of styled-components in ReactJS</title>
+</Head>
+
+# Overview of styled-components in ReactJS
+
+<br />
+
+### Connect.Tech 2018
+
+---
+
+<LiveCode />
 
 ---
 
 # About Me
 
-* My name is Steve Pietrek
-* Work for Cardinal Solutions in Raleigh, NC
-* App Dev Practice Manager
-* Front End Developer
-* Twitter: @spietrek
+<Appear>
+  <h2>My name is Steve Pietrek</h2>
+  <h2>Work for Cardinal Solutions in Raleigh, NC</h2>
+  <h2>App Dev Practice Manager</h2>
+  <h2>Front End Developer</h2>
+  <h2>Twitter: @spietrek</h2>
+</Appear>
+
+---
+
+<Image src="images/css.gif" size="50% 50%"/>
+
+---
+
+# CSS
+
+* Many developers say: “I’m a developer, I don’t care how things look!”.
+* Bottom line, since they don’t care about how things look, they don’t care to learn CSS. They should.
+* Developers should learn CSS to know how an application should be styled and provide responsive and accessibility support.
+
+
+> __*CSS is hard. It can take years to be proficient.*__
+
+---
+
+# CSS Challenges
+
+1. Quicky language
+2. Designed for documents not apps
+3. Global Namespace
+4. Hardly reusable
+5. Non-programmatic
+6. Non-modular
+7. CSS development too slow
+8. Styling conflicts
+9. Dead code
+
+---
+
+# Component Based Design
+
+### Split UI into small, more manageable parts.
+### React is structured around components.
+### Isolating components and states allow developers to articulate behavior and functionality.
+### Based on Atomic Design.
+
+---
+
+# Atomic Design ( Brad Frost)
+
+<Appear>
+  <ol>Atoms - Are the basic building blocks of matter.</ol>
+  <ol>Molecules - Groups of atoms bonded together and are the smallest fundamental units of a compound.</ol>
+  <ol>Organisms - Groups of molecules joined together to form a relatively complex, distinct section of an interface.</ol>
+  <ol>Templates - Consist mostly of groups of organisms stitched together to form pages.</ol>
+  <ol>Pages - Specific instances of templates.</ol>
+</Appear>
+
+---
+
+<Image src="images/atomic-design.png" size="75% 90%"/>
+
+---
+
+# Styling in ReactJS
+
+* CSS Stylesheet
+* Inline Styling
+* CSS Modules
+* CSS-in-JS
+
+---
+
+# CSS Stylesheet
+
+```
+import React from 'react';
+import './DottedBox.css';
+
+const DottedBox = () => (
+  <div className="DottedBox">
+    <p className="DottedBox_content">Get started with CSS styling</p>
+  </div>
+);
+```
+
+---
+
+# Inline Styling
+
+```
+import React from 'react';
+
+const divStyle = {
+  margin: '40px',
+  border: '5px solid pink'
+};
+const pStyle = {
+  fontSize: '15px',
+  textAlign: 'center'
+};
+
+const Box = () => (
+  <div style={divStyle}>
+    <p style={pStyle}>Get started with inline style</p>
+  </div>
+);
+
+export default Box;
+```
+
+---
+
+# CSS Modules
+
+```
+import React from 'react';
+import styles from './DashedBox.css';
+
+const DashedBox = () => (
+  <div className={styles.container}>
+    <p className={styles.content}>Get started with CSS Modules style</p>
+  </div>
+);
+
+export default DashedBox;
+```
+
+---
+
+# CSS-in-JS Benefits
+
+1. Scoped styles without selectors. Unique class names are created to avoid collisions.
+2. Avoids specificity conflicts. Two style definitions for one element can be used.
+3. Source order independence. No need to worry about how the order of files is imported.
+4. Dead code elimination. Linters will show unused components so they can be removed if not used.
+5. Vendor prefixing. Adds vendor prefixes only for the required browser.
+6. Highly expressive which makes reading JSX easier.
+
+<br />
+
+### - Christopher Chedeau, a.k.a. vjeux
 
 ---
 
 <Image src="images/styled-components-evolution.png" size="50% 50%"/>
+
+---
+
+# styled-components Benefits
+
+### Use as as much or as little as you want
+### Use your favorite UI framework and add styled-components on top
+### Defining styled components that possess their own encapsulated styles
+
+---
+
+> The basic idea of styled-components is to enforce best practices by removing the mapping between styles and components.
+
+<br />
+
+### - Max Stoiber
+
 
 ---
 

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 import styled from 'styled-components';
 
 const Title = styled.h1`
@@ -21,17 +20,17 @@ const TitleBold = styled(Title)`
   }
 `;
 
-// const Wrapper = styled.section`
-//   padding: 4em;
-//   background: ${props => (props.primary ? "white" : "papayawhip")};
-//   font-family: Lato, sans-serif;
-// `;
+const Wrapper = styled.section`
+  padding: 4em;
+  background: ${props => (props.primary ? 'white' : 'papayawhip')};
+  font-family: Lato, sans-serif;
+`;
 
-const Wrapper = styled.section(props => ({
-  padding: '4em',
-  background: props.primary ? 'white' : 'papayawhip',
-  fontFamily: 'Lato, sans-serif',
-}));
+// const Wrapper = styled.section(props => ({
+//   padding: '4em',
+//   background: props.primary ? 'white' : 'papayawhip',
+//   fontFamily: 'Lato, sans-serif',
+// }));
 
 class Demo1 extends Component {
   constructor() {
