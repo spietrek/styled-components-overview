@@ -15,7 +15,7 @@ const StyledTitleBold = styled(StyledTitle)`
 
 const StyledWrapper = styled.section`
   padding: 4em;
-  background: ${props => (props.primary ? 'white' : 'papayawhip')};
+  background: papayawhip;
 `;
 
 class DemoExtend extends Component {

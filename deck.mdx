@@ -7,6 +7,7 @@ import DemoBasics from './components/DemoBasics'
 import DemoExtend from './components/DemoExtend'
 import DemoPseudoClasses from './components/DemoPseudoClasses'
 import DemoAvoidDupeCode from './components/DemoAvoidDupeCode'
+import DemoMediaQueries from './components/DemoMediaQueries'
 import DemoClock from './components/DemoClock'
 import DemoPolished from './components/DemoPolished'
 
@@ -325,7 +326,27 @@ yarn add styled-components
 
 ---
 
-# Media Templates
+# Media Queries
+
+<DemoMediaQueries />
+
+---
+
+<CodeSurfer
+  title="Media Queries"
+  notes="Use ⬆️ and ⬇️ keys"
+  code={require("raw-loader!./snippets/DemoMediaQueries.mdxx")}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { notes: "⬇️" },
+    { lines: [2], notes: "Import styled-components" },
+    { range: [4, 7], notes: "Set media query sizes" },
+    { range: [9, 16], notes: "Create tagged literals for wrapping media queries" },
+    { range: [18, 33], notes: "Set appropriate colors using media queries" },
+    { range: [34, 42], notes: "Use the styled components" },
+  ]}
+/>
 
 ---
 

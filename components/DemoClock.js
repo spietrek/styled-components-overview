@@ -60,7 +60,6 @@ const StyleButton = styled.button`
   border: none;
   padding: 15px 32px;
   text-align: center;
-  text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin-right: 20px;

@@ -13,7 +13,7 @@ const StyledTitle = styled.h1`
 
 const StyledWrapper = styled.section`
   padding: 4em;
-  background: ${props => (props.primary ? 'white' : 'papayawhip')};
+  background: papayawhip;
 `;
 
 class DemoPseudoClasses extends Component {
