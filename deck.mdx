@@ -30,8 +30,7 @@ import DemoPolished from './components/DemoPolished'
 
 ## My name is Steve Pietrek
 ## Work for Cardinal Solutions in Raleigh, NC
-## App Dev Practice Manager
-## Front End Developer
+## App Dev Practice Manager / Front End Developer
 ## Twitter: @spietrek
 
 ---
@@ -42,13 +41,14 @@ import DemoPolished from './components/DemoPolished'
 
 # CSS
 
-* Many developers say: “I’m a developer, I don’t care how things look!”.
-* Bottom line, since they don’t care about how things look, they don’t care to learn CSS. They should.
-* Developers should learn CSS to know how an application should be styled and provide responsive and accessibility support.
+#### Developers don't care to learn CSS.
+#### “I’m a developer, I don’t care how things look!”.
+#### "CSS is a toy language."
+#### *All* front end developers should have a understanding of CSS.
 
 <br />
 
-> __*CSS is hard. It can take years to be proficient.*__
+> CSS is hard. Pickup the basics in a short time; however, it can take years to become proficient.
 
 ---
 
@@ -76,6 +76,15 @@ import DemoPolished from './components/DemoPolished'
 
 ---
 
+# Component Reusability
+
+1. Always look for ways to reuse code between projects.
+2. UI components are often designed with reusability in mind.
+3. Code (including styles) is packaged together to make sharing easier and avoid unused code bloat.
+4. Bit allows sharing components code between projects. All components are organized on the cloud, made discoverable, and synced to all your projects.
+
+---
+
 # Atomic Design ( Brad Frost)
 
 1. Atoms - Are the basic building blocks of matter.
@@ -86,31 +95,16 @@ import DemoPolished from './components/DemoPolished'
 
 ---
 
-<Image src="images/atomic-design.png" size="75% 90%"/>
+<Image src="images/atomic-design-basic.png" size="55% 70%"/>
 
 ---
 
 # Styling in ReactJS
 
 * CSS Stylesheet
-* Inline Styling
 * CSS Modules
+* Inline Styling
 * CSS-in-JS
-
----
-
-# CSS Stylesheet
-
-```
-import React from 'react';
-import './DottedBox.css';
-
-const DottedBox = () => (
-  <div className="DottedBox">
-    <p className="DottedBox_content">Get started with CSS styling</p>
-  </div>
-);
-```
 
 ---
 
@@ -140,23 +134,6 @@ export default Box;
 
 ---
 
-# CSS Modules
-
-```
-import React from 'react';
-import styles from './DashedBox.css';
-
-const DashedBox = () => (
-  <div className={styles.container}>
-    <p className={styles.content}>Get started with CSS Modules style</p>
-  </div>
-);
-
-export default DashedBox;
-```
-
----
-
 > "CSS-in-JS" refers to a pattern where CSS is composed using JavaScript instead of defined in external files.
 
 <br />
@@ -180,15 +157,6 @@ export default DashedBox;
 
 ---
 
-# Component Reusability
-
-1. Always look for ways to reuse code between projects.
-2. UI components are often designed with reusability in mind.
-3. Code (including styles) is packaged together to make sharing easier and avoid unused code bloat.
-4. Bit allows sharing components code between projects. All components are organized on the cloud, made discoverable, and synced in all your projects.
-
----
-
 <Image src="images/styled-components-evolution.png" size="50% 50%"/>
 
 ---
@@ -206,7 +174,7 @@ export default DashedBox;
 1. Use as as much or as little as you want
 2. Use your favorite UI framework and add styled-components on top
 3. Defining styled components that possess their own encapsulated styles
-4. Better Developer Experience (DX)
+4. Layout and styling in a single file for efficiency
 
 ---
 
@@ -365,8 +333,10 @@ yarn add styled-components
   steps={[
     { notes: "⬇️" },
     { lines: [3], notes: "Import styled-components" },
+    { range: [76, 85], notes: "Set component state" },
     { range: [59, 70], notes: "Style button" },
-    { range: [163, 185], notes: "Use the styled components" },
+    { range: [164, 175], notes: "Use the styled components" },
+    { range: [88, 91], notes: "Update component state" },
   ]}
 />
 
@@ -383,7 +353,7 @@ yarn add styled-components
     { lines: [3], notes: "Import styled-components" },
     { range: [6, 12], notes: "Define theme" },
     { range: [40, 51], notes: "Create styled clock block" },
-    { range: [127, 133], notes: "Use the styled component" },
+    { range: [127, 140], notes: "Use the styled component" },
   ]}
 />
 
@@ -437,6 +407,7 @@ yarn add styled-components
   steps={[
     { notes: "⬇️" },
     { lines: [3], notes: "Import Polished" },
+    { range: [5, 8], notes: "Define base style" },
     { range: [10, 12], notes: "Lighten text example" },
     { range: [14, 16], notes: "Ellipsis text example" },
     { range: [18, 20], notes: "Word wrap text example" },

@@ -26,4 +26,7 @@ export default {
   code: {
     color: '#33F9FF',
   },
+  h4: {
+    textAlign: 'left'
+  }
 };

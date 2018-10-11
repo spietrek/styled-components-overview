@@ -37,7 +37,7 @@ const animationMixin = css`
   animation: ${rotate360} 5s linear infinite;
 `;
 
-const StyledClockBlock = styled.div`
+const StyledTimeBlock = styled.div`
   width: 15vw;
   padding: 4vw 2vw;
   margin: 0 3vw;
@@ -124,41 +124,41 @@ class DemoProps extends Component {
             callback={callback}
             timeout={1000}
           />
-          <StyledClockBlock
+          <StyledTimeBlock
             disabled={timerDisabled}
             animation={animationEnabled}
             theme={theme.day}
           >
             {day}
-          </StyledClockBlock>
-          <StyledClockBlock
+          </StyledTimeBlock>
+          <StyledTimeBlock
             disabled={timerDisabled}
             animation={animationEnabled}
             theme={theme.hour}
           >
             {hour}
-          </StyledClockBlock>
-          <StyledClockBlock
+          </StyledTimeBlock>
+          <StyledTimeBlock
             disabled={timerDisabled}
             animation={animationEnabled}
             theme={theme.min}
           >
             {min}
-          </StyledClockBlock>
-          <StyledClockBlock
+          </StyledTimeBlock>
+          <StyledTimeBlock
             disabled={timerDisabled}
             animation={animationEnabled}
             theme={theme.sec}
           >
             {sec}
-          </StyledClockBlock>
-          <StyledClockBlock
+          </StyledTimeBlock>
+          <StyledTimeBlock
             disabled={timerDisabled}
             animation={animationEnabled}
             theme={theme.ampm}
           >
             {ampm}
-          </StyledClockBlock>
+          </StyledTimeBlock>
         </StyledContainer>
         <StyledButtonContainer>
           <StyleButton
@@ -167,7 +167,10 @@ class DemoProps extends Component {
           >
             Start Timer
           </StyleButton>
-          <StyleButton disabled={timerDisabled} onClick={this.onToggleInterval}>
+          <StyleButton 
+            disabled={timerDisabled} 
+            onClick={this.onToggleInterval}
+          >
             Stop Timer
           </StyleButton>
           <StyleButton
