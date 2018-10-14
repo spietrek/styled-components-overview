@@ -20,13 +20,19 @@ export default {
   h1: {
     marginBottom: '50px',
   },
+  h2: {
+    textAlign: 'left',
+  },
+  h3: {
+    textAlign: 'left',
+  },
+  h4: {
+    textAlign: 'left',
+  },
   pre: {
     color: '#33F9FF',
   },
   code: {
     color: '#33F9FF',
   },
-  h4: {
-    textAlign: 'left'
-  }
 };

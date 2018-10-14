@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import styled, { keyframes, css } from 'styled-components';
 import moment from 'moment';
+import Interval from './Interval';
 
 const theme = {
   day: '#7D53DE',
@@ -80,7 +80,7 @@ class DemoProps extends Component {
       hour: '00',
       min: '00',
       sec: '00',
-      ampm: 'am',
+      ampm: 'AM',
     };
   }
 
@@ -105,146 +105,44 @@ class DemoProps extends Component {
   };
 
   render() {
-    const {
-      timerDisabled,
-      animationEnabled,
-      callback,
-      day,
-      hour,
-      min,
-      sec,
-      ampm,
-    } = this.state;
+    const { timerDisabled, animationEnabled, callback, day, hour, min, sec, ampm } = this.state;
     return (
       <StyledAppContainer>
         <StyledContainer>
-          <Interval
-            enabled={!timerDisabled}
-            callback={callback}
-            timeout={1000}
-          />
-          <StyledTimeBlock
-            disabled={timerDisabled}
-            animation={animationEnabled}
-            theme={theme.day}
-          >
+          <Interval enabled={!timerDisabled} callback={callback} timeout={1000} />
+          <StyledTimeBlock disabled={timerDisabled} animation={animationEnabled} theme={theme.day}>
             {day}
           </StyledTimeBlock>
-          <StyledTimeBlock
-            disabled={timerDisabled}
-            animation={animationEnabled}
-            theme={theme.hour}
-          >
+          <StyledTimeBlock disabled={timerDisabled} animation={animationEnabled} theme={theme.hour}>
             {hour}
           </StyledTimeBlock>
-          <StyledTimeBlock
-            disabled={timerDisabled}
-            animation={animationEnabled}
-            theme={theme.min}
-          >
+          <StyledTimeBlock disabled={timerDisabled} animation={animationEnabled} theme={theme.min}>
             {min}
           </StyledTimeBlock>
-          <StyledTimeBlock
-            disabled={timerDisabled}
-            animation={animationEnabled}
-            theme={theme.sec}
-          >
+          <StyledTimeBlock disabled={timerDisabled} animation={animationEnabled} theme={theme.sec}>
             {sec}
           </StyledTimeBlock>
-          <StyledTimeBlock
-            disabled={timerDisabled}
-            animation={animationEnabled}
-            theme={theme.ampm}
-          >
+          <StyledTimeBlock disabled={timerDisabled} animation={animationEnabled} theme={theme.ampm}>
             {ampm}
           </StyledTimeBlock>
         </StyledContainer>
         <StyledButtonContainer>
-          <StyleButton
-            disabled={!timerDisabled}
-            onClick={this.onToggleInterval}
-          >
+          <StyleButton disabled={!timerDisabled} onClick={this.onToggleInterval}>
             Start Timer
           </StyleButton>
           <StyleButton disabled={timerDisabled} onClick={this.onToggleInterval}>
             Stop Timer
           </StyleButton>
-          <StyleButton
-            disabled={timerDisabled || animationEnabled}
-            onClick={this.onToggleAnimation}
-          >
+          <StyleButton disabled={timerDisabled || animationEnabled} onClick={this.onToggleAnimation}>
             Start Animation
           </StyleButton>
-          <StyleButton
-            disabled={!animationEnabled}
-            onClick={this.onToggleAnimation}
-          >
+          <StyleButton disabled={!animationEnabled} onClick={this.onToggleAnimation}>
             Stop Animation
           </StyleButton>
         </StyledButtonContainer>
       </StyledAppContainer>
     );
   }
-}
-
-class Interval extends Component {
-  static defaultProps = {
-    enabled: false,
-    timeout: 1000,
-  };
-
-  static propTypes = {
-    callback: PropTypes.func.isRequired,
-    enabled: PropTypes.bool,
-    timeout: PropTypes.number,
-  };
-
-  componentDidMount() {
-    if (this.props.enabled) {
-      this.start();
-    }
-  }
-
-  shouldComponentUpdate({ timeout, callback, enabled }) {
-    return (
-      this.props.timeout !== timeout ||
-      this.props.callback !== callback ||
-      this.props.enabled !== enabled
-    );
-  }
-
-  componentDidUpdate({ enabled }) {
-    if (this.props.enabled !== enabled) {
-      if (this.props.enabled) {
-        this.start();
-      } else {
-        this.stop();
-      }
-    }
-  }
-
-  componentWillUnmount() {
-    this.stop();
-  }
-
-  callback = () => {
-    if (this.timer) {
-      this.props.callback();
-      this.start();
-    }
-  };
-
-  start = () => {
-    this.stop();
-    this.timer = setTimeout(this.callback, this.props.timeout);
-  };
-
-  stop = () => {
-    clearTimeout(this.timer);
-    this.timer = null;
-  };
-
-  render = () => false;
 }
 
 export default DemoProps;
