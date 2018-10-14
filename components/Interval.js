@@ -20,7 +20,11 @@ class Interval extends Component {
   }
 
   shouldComponentUpdate({ timeout, callback, enabled }) {
-    return this.props.timeout !== timeout || this.props.callback !== callback || this.props.enabled !== enabled;
+    return (
+      this.props.timeout !== timeout ||
+      this.props.callback !== callback ||
+      this.props.enabled !== enabled
+    );
   }
 
   componentDidUpdate({ enabled }) {

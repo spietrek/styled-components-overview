@@ -1,6 +1,6 @@
 import { Head, Image, Notes } from 'mdx-deck'
 import { Invert, Split } from 'mdx-deck/layouts'
-import { CodeSurfer } from "mdx-deck-code-surfer"
+import { CodeSurfer } from 'mdx-deck-code-surfer'
 export { default as theme } from './theme'
 
 import DemoBasics from './components/DemoBasics'
@@ -35,6 +35,14 @@ import DemoPolished from './components/DemoPolished'
 
 ---
 
+<Image src="images/css.gif" size="50% 50%"/>
+
+---
+
+<Image src="images/css-properties.png" size="50% 50%"/>
+
+---
+
 # CSS Advantages
 
 ## Consistency
@@ -44,21 +52,13 @@ import DemoPolished from './components/DemoPolished'
 
 ---
 
-<Image src="images/css.gif" size="50% 50%"/>
-
----
-
-<Image src="images/css-properties.png" size="50% 50%"/>
-
----
-
 > CSS is hard. Developers can pickup the basics in a short time; however, it can take years to become proficient.
 
 ---
 
 # CSS Challenges
 
-1. CSS development too slow
+1. Slow CSS development
 2. Global namespace
 3. Styling conflicts
 4. Specificity
@@ -69,40 +69,12 @@ import DemoPolished from './components/DemoPolished'
 
 ---
 
-# Component Based Design
-
-1. Developers should always look for ways to reuse code between projects.
-2. Components promote reusability.
-3. Components can be split UI into small, more manageable parts.
-4. Isolating components and states allow developers to articulate behavior and functionality.
-5. Components can be developed independently using contract specfications.
-6. Component code (including styles) is packaged together to make sharing easier and avoid unused code bloat.
-7. Components can be refactored or replaced.
-8. Style guides, like Storybook or Styleguidist, allow to work on a component in isolation.
-9. [Bit](https://bitsrc.io/). Allows sharing components code between projects. All components are organized on the cloud, made discoverable, and synced to all your projects.
-
----
-
-# Atomic Design ( Brad Frost)
-
-1. Atoms - Are the basic building blocks of matter.
-2. Molecules - Groups of atoms bonded together and are the smallest fundamental units of a compound.
-3. Organisms - Groups of molecules joined together to form a relatively complex, distinct section of an interface.
-4. Templates - Consist mostly of groups of organisms stitched together to form pages.
-5. Pages - Specific instances of templates.
-
----
-
-<Image src="images/atomic-design-basic.png" size="55% 70%"/>
-
----
-
 # Styling in ReactJS
 
-* CSS Stylesheet
-* CSS Modules
-* Inline Styling
-* CSS-in-JS
+## CSS Stylesheet
+## CSS Modules
+## Inline Styling
+## CSS-in-JS
 
 ---
 
@@ -142,11 +114,39 @@ export default Box;
 
 | CSS Challenges | CSS-in-JS Benefits |
 | ----------------| ------------- |
-| CSS development too slow | Full CSS support. Automatic vendor prefixing. Themes. Editor syntax highlighting. |
+| CSS development too slow | Full CSS support. Themes. Editor syntax highlighting. Automatic vendor prefixing. |
 | Global namespace, Styling conflicts | Optional global CSS. Scoped styles without selectors. Unique class names are created to avoid collisions. |
 | Specificity | Two style definitions for one element can be used to avoid specificity conflicts. |
-| Hardly reusable | CSS is defined in components which can be reusable. |
-| Dead code | Linters can show unused components. |
+| Hardly reusable | CSS is defined in *components* which can be reused. |
+| Dead code | Linters can show unused CSS. |
+
+---
+
+# Component Based Design
+
+1. Developers should always look for ways to reuse code between projects.
+2. Components promote reusability.
+3. Components can be split UI into small, more manageable parts.
+4. Isolating components and states allow developers to articulate behavior and functionality.
+5. Components can be developed independently using contract specfications.
+6. Component code (including styles) is packaged together to make sharing easier and avoid unused code bloat.
+7. Components can be refactored or replaced.
+8. Style guides, like Storybook or Styleguidist, allow to work on a component in isolation.
+9. [Bit](https://bitsrc.io/). Allows sharing components code between projects. All components are organized on the cloud, made discoverable, and synced to all your projects.
+
+---
+
+# Atomic Design ( Brad Frost)
+
+1. Atoms - Are the basic building blocks of matter.
+2. Molecules - Groups of atoms bonded together and are the smallest fundamental units of a compound.
+3. Organisms - Groups of molecules joined together to form a relatively complex, distinct section of an interface.
+4. Templates - Consist mostly of groups of organisms stitched together to form pages.
+5. Pages - Specific instances of templates.
+
+---
+
+<Image src="images/atomic-design-basic.png" size="55% 70%"/>
 
 ---
 
@@ -255,8 +255,9 @@ yarn add styled-components
     { notes: "⬇️" },
     { lines: [2], notes: "Import styled-components (with css)" },
     { range: [3, 9], notes: "Import React Icons" },
-    { range: [13, 17], notes: "Create base style" },
-    { range: [18, 36], notes: "Extend base style" },
+    { range: [31, 34], notes: "Create base style" },
+    { range: [36, 54], notes: "Extend base style" },
+    { range: [56, 81], notes: "Use the styled components" },
   ]}
 />
 
@@ -322,11 +323,11 @@ yarn add styled-components
   dark={false}
   steps={[
     { notes: "⬇️" },
-    { lines: [3], notes: "Import styled-components" },
-    { range: [76, 85], notes: "Set component state" },
+    { lines: [2], notes: "Import styled-components" },
+    { range: [75, 84], notes: "Set component state" },
     { range: [59, 70], notes: "Style button" },
-    { range: [164, 175], notes: "Use the styled components" },
-    { range: [88, 91], notes: "Update component state" },
+    { range: [163, 174], notes: "Use the styled components" },
+    { range: [87, 91], notes: "Update component state" },
   ]}
 />
 
@@ -340,10 +341,10 @@ yarn add styled-components
   dark={false}
   steps={[
     { notes: "⬇️" },
-    { lines: [3], notes: "Import styled-components" },
+    { lines: [2], notes: "Import styled-components" },
     { range: [6, 12], notes: "Define theme" },
     { range: [40, 51], notes: "Create styled clock block" },
-    { range: [127, 140], notes: "Use the styled component" },
+    { range: [126, 139], notes: "Use the styled component" },
   ]}
 />
 
@@ -363,11 +364,13 @@ yarn add styled-components
   dark={false}
   steps={[
     { notes: "⬇️" },
-    { lines: [3], notes: "Import styled-components" },
+    { lines: [2], notes: "Import styled-components" },
     { range: [26, 34], notes: "Create keyframes style" },
     { range: [36, 38], notes: "Create animation mixin" },
     { range: [40, 51], notes: "Create styled clock block" },
-    { range: [127, 133], notes: "Use the styled component" },
+    { range: [175, 186], notes: "Start/Stop animation cycle" },
+    { range: [92, 95], notes: "Update component state" },
+    { range: [126, 132], notes: "Use the styled component" },
   ]}
 />
 
@@ -430,7 +433,7 @@ yarn add styled-components
 
 export default Split
 
-## Thank you for attending (@spietrek)
+# Thank you for attending (@spietrek)
 
 ![](images/qrcode.png)
 

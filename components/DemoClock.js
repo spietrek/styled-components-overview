@@ -105,38 +105,83 @@ class DemoProps extends Component {
   };
 
   render() {
-    const { timerDisabled, animationEnabled, callback, day, hour, min, sec, ampm } = this.state;
+    const {
+      timerDisabled,
+      animationEnabled,
+      callback,
+      day,
+      hour,
+      min,
+      sec,
+      ampm,
+    } = this.state;
     return (
       <StyledAppContainer>
         <StyledContainer>
-          <Interval enabled={!timerDisabled} callback={callback} timeout={1000} />
-          <StyledTimeBlock disabled={timerDisabled} animation={animationEnabled} theme={theme.day}>
+          <Interval
+            enabled={!timerDisabled}
+            callback={callback}
+            timeout={1000}
+          />
+          <StyledTimeBlock
+            disabled={timerDisabled}
+            animation={animationEnabled}
+            theme={theme.day}
+          >
             {day}
           </StyledTimeBlock>
-          <StyledTimeBlock disabled={timerDisabled} animation={animationEnabled} theme={theme.hour}>
+          <StyledTimeBlock
+            disabled={timerDisabled}
+            animation={animationEnabled}
+            theme={theme.hour}
+          >
             {hour}
           </StyledTimeBlock>
-          <StyledTimeBlock disabled={timerDisabled} animation={animationEnabled} theme={theme.min}>
+          <StyledTimeBlock
+            disabled={timerDisabled}
+            animation={animationEnabled}
+            theme={theme.min}
+          >
             {min}
           </StyledTimeBlock>
-          <StyledTimeBlock disabled={timerDisabled} animation={animationEnabled} theme={theme.sec}>
+          <StyledTimeBlock
+            disabled={timerDisabled}
+            animation={animationEnabled}
+            theme={theme.sec}
+          >
             {sec}
           </StyledTimeBlock>
-          <StyledTimeBlock disabled={timerDisabled} animation={animationEnabled} theme={theme.ampm}>
+          <StyledTimeBlock
+            disabled={timerDisabled}
+            animation={animationEnabled}
+            theme={theme.ampm}
+          >
             {ampm}
           </StyledTimeBlock>
         </StyledContainer>
         <StyledButtonContainer>
-          <StyleButton disabled={!timerDisabled} onClick={this.onToggleInterval}>
+          <StyleButton
+            disabled={!timerDisabled}
+            onClick={this.onToggleInterval}
+          >
             Start Timer
           </StyleButton>
-          <StyleButton disabled={timerDisabled} onClick={this.onToggleInterval}>
+          <StyleButton
+            disabled={timerDisabled}
+            onClick={this.onToggleInterval}
+          >
             Stop Timer
           </StyleButton>
-          <StyleButton disabled={timerDisabled || animationEnabled} onClick={this.onToggleAnimation}>
+          <StyleButton
+            disabled={timerDisabled || animationEnabled}
+            onClick={this.onToggleAnimation}
+          >
             Start Animation
           </StyleButton>
-          <StyleButton disabled={!animationEnabled} onClick={this.onToggleAnimation}>
+          <StyleButton
+            disabled={!animationEnabled}
+            onClick={this.onToggleAnimation}
+          >
             Stop Animation
           </StyleButton>
         </StyledButtonContainer>
