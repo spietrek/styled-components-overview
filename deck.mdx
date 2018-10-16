@@ -100,14 +100,19 @@ import DemoPolished from './components/DemoPolished'
 
 # Component Based Design
 
-1. Components promote reusability.
-2. Components can be split UI into small, more manageable parts.
-3. Isolating components and states allow developers to articulate behavior and functionality.
-4. Components can be developed independently using contract specfications.
-5. Component code (including styles) is packaged together to make sharing easier and avoid unused code bloat.
-6. Components can be refactored or replaced.
-7. Style guides, like Storybook or Styleguidist, allow to work on a component in isolation.
-8. [Bit](https://bitsrc.io/). Allows sharing components code between projects. All components are organized on the cloud, made discoverable, and synced to all your projects.
+1. Promote reusability.
+2. Split UI into small, more manageable parts.
+3. Allow developers to articulate behavior and functionality.
+4. Developed independently using contract specfications.
+5. Code (including styles) is packaged together.
+6. Refactored or replaced.
+
+---
+
+# Design Systems
+
+1. Style guides, like Storybook or Styleguidist, allow to work on a component in isolation.
+2. [Bit](https://bitsrc.io/). Allows sharing components code between projects. All components are organized on the cloud, made discoverable, and synced to all your projects.
 
 ---
 
@@ -115,7 +120,7 @@ import DemoPolished from './components/DemoPolished'
 
 <br />
 
-## - Max Stoiber
+## - Max Stoiber (styled-components creator)
 
 <Notes>
 styled-components Benefits
@@ -150,7 +155,7 @@ yarn add styled-components
   notes="Use ⬆️ and ⬇️ keys"
   code={require("raw-loader!./snippets/DemoBasicsA.mdxx")}
   showNumbers={false}
-  dark={false}
+  dark={true}
   steps={[
     { notes: "⬇️" },
     { range: [3, 7], notes: "Style a h1" },
@@ -166,7 +171,7 @@ yarn add styled-components
   notes="Use ⬆️ and ⬇️ keys"
   code={require("raw-loader!./snippets/DemoBasicsB.mdxx")}
   showNumbers={false}
-  dark={false}
+  dark={true}
   steps={[
     { notes: "⬇️" },
     { lines: [2], notes: "Import styled-components" },
@@ -183,7 +188,7 @@ yarn add styled-components
   notes="Use ⬆️ and ⬇️ keys"
   code={require("raw-loader!./snippets/DemoBasicsC.mdxx")}
   showNumbers={false}
-  dark={false}
+  dark={true}
   steps={[
     { notes: "⬇️" },
     { lines: [2], notes: "Import styled-components" },
@@ -206,7 +211,7 @@ yarn add styled-components
   notes="Use ⬆️ and ⬇️ keys"
   code={require("raw-loader!./snippets/DemoExtend.mdxx")}
   showNumbers={false}
-  dark={false}
+  dark={true}
   steps={[
     { notes: "⬇️" },
     { lines: [2], notes: "Import styled-components" },
@@ -229,7 +234,7 @@ yarn add styled-components
   notes="Use ⬆️ and ⬇️ keys"
   code={require("raw-loader!./snippets/DemoAvoidDupeCode.mdxx")}
   showNumbers={false}
-  dark={false}
+  dark={true}
   steps={[
     { notes: "⬇️" },
     { lines: [2], notes: "Import styled-components (with css)" },
@@ -253,7 +258,7 @@ yarn add styled-components
   notes="Use ⬆️ and ⬇️ keys"
   code={require("raw-loader!./snippets/DemoPseudoClasses.mdxx")}
   showNumbers={false}
-  dark={false}
+  dark={true}
   steps={[
     { notes: "⬇️" },
     { lines: [2], notes: "Import styled-components" },
@@ -275,7 +280,7 @@ yarn add styled-components
   notes="Use ⬆️ and ⬇️ keys"
   code={require("raw-loader!./snippets/DemoMediaQueries.mdxx")}
   showNumbers={false}
-  dark={false}
+  dark={true}
   steps={[
     { notes: "⬇️" },
     { lines: [2], notes: "Import styled-components" },
@@ -299,7 +304,7 @@ yarn add styled-components
   notes="Use ⬆️ and ⬇️ keys"
   code={require("raw-loader!./snippets/DemoClock.mdxx")}
   showNumbers={false}
-  dark={false}
+  dark={true}
   steps={[
     { notes: "⬇️" },
     { lines: [2], notes: "Import styled-components" },
@@ -323,7 +328,7 @@ yarn add styled-components
   notes="Use ⬆️ and ⬇️ keys"
   code={require("raw-loader!./snippets/DemoTheme.mdxx")}
   showNumbers={false}
-  dark={false}
+  dark={true}
   steps={[
     { notes: "⬇️" },
     { lines: [2], notes: "Import styled-components (with ThemeProvider)" },
@@ -346,7 +351,7 @@ yarn add styled-components
   notes="Use ⬆️ and ⬇️ keys"
   code={require("raw-loader!./snippets/DemoClock.mdxx")}
   showNumbers={false}
-  dark={false}
+  dark={true}
   steps={[
     { notes: "⬇️" },
     { lines: [2], notes: "Import styled-components" },
@@ -381,7 +386,7 @@ yarn add styled-components
   notes="Use ⬆️ and ⬇️ keys"
   code={require("raw-loader!./snippets/DemoPolished.mdxx")}
   showNumbers={false}
-  dark={false}
+  dark={true}
   steps={[
     { notes: "⬇️" },
     { lines: [3], notes: "Import Polished" },
