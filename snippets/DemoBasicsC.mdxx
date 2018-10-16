@@ -7,9 +7,12 @@ const StyledTitle = styled.h1({
   color: 'palevioletred',
 });
 
-...
+const StyledWrapper = styled.section({
+  padding: '4em',
+  background: 'papayawhip'
+});
 
-class DemoBasics extends Component {
+class DemoBasicsC extends Component {
   render() {
     return (
       <StyledWrapper>
@@ -19,4 +22,4 @@ class DemoBasics extends Component {
   }
 }
 
-export default DemoBasics;
+export default DemoBasicsC;

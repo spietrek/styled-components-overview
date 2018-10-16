@@ -12,7 +12,7 @@ const StyledWrapper = styled.section`
   background: papayawhip;
 `;
 
-class DemoBasics extends Component {
+class DemoBasicsB extends Component {
   render() {
     return (
       <StyledWrapper>
@@ -22,4 +22,4 @@ class DemoBasics extends Component {
   }
 }
 
-export default DemoBasics;
+export default DemoBasicsB;

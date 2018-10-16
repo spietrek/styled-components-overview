@@ -4,6 +4,7 @@ import { CodeSurfer } from 'mdx-deck-code-surfer'
 export { default as theme } from './theme'
 
 import DemoBasics from './components/DemoBasics'
+import DemoTheme from './components/DemoTheme.js'
 import DemoExtend from './components/DemoExtend'
 import DemoPseudoClasses from './components/DemoPseudoClasses'
 import DemoAvoidDupeCode from './components/DemoAvoidDupeCode'
@@ -41,7 +42,7 @@ import DemoPolished from './components/DemoPolished'
 
 ---
 
-<Image src="images/css-properties.png" size="50% 50%"/>
+<Image src="images/css-properties.png" size="45% 50%"/>
 
 ---
 
@@ -61,11 +62,9 @@ import DemoPolished from './components/DemoPolished'
 # CSS Challenges
 
 1. Slow CSS development
-2. Global namespace
-3. Styling conflicts
-4. Specificity
-5. Hardly reusable
-6. Dead code
+2. Global namespace / Styling conflicts / Specificity
+3. Dead code
+4. Hardly reusable / Site-scoped
 
 ### Preprocessors (LESS, Sass, CSS Modules) help, but don't solve all issues.
 
@@ -77,32 +76,6 @@ import DemoPolished from './components/DemoPolished'
 ## CSS Modules
 ## Inline Styling
 ## CSS-in-JS
-
----
-
-# Inline Styling
-
-```
-import React from 'react';
-
-const divStyle = {
-  margin: '40px',
-  border: '5px solid pink'
-};
-
-const pStyle = {
-  fontSize: '15px',
-  textAlign: 'center'
-};
-
-const Box = () => (
-  <div style={divStyle}>
-    <p style={pStyle}>Get started with inline style</p>
-  </div>
-);
-
-export default Box;
-```
 
 ---
 
@@ -119,38 +92,22 @@ export default Box;
 | CSS Challenges | CSS-in-JS Benefits |
 | ----------------| ------------- |
 | CSS development too slow | Full CSS support. Themes. Editor syntax highlighting. Automatic vendor prefixing. |
-| Global namespace, Styling conflicts | Optional global CSS. Scoped styles without selectors. Unique class names are created to avoid collisions. |
-| Specificity | Two style definitions for one element can be used to avoid specificity conflicts. |
+| Global namespace / Styling conflicts / Specificity | Scoped styles without selectors. Unique class names are created to avoid collisions. Two style definitions for one element can be used to avoid specificity conflicts. |
 | Dead code | Linters can show unused code. |
-| Hardly reusable | CSS is defined in *components* which can be reused. |
+| Hardly reusable / Site-scoped | CSS is defined in *components* which can be reused. |
 
 ---
 
 # Component Based Design
 
-1. Developers should always look for ways to reuse code between projects.
-2. Components promote reusability.
-3. Components can be split UI into small, more manageable parts.
-4. Isolating components and states allow developers to articulate behavior and functionality.
-5. Components can be developed independently using contract specfications.
-6. Component code (including styles) is packaged together to make sharing easier and avoid unused code bloat.
-7. Components can be refactored or replaced.
-8. Style guides, like Storybook or Styleguidist, allow to work on a component in isolation.
-9. [Bit](https://bitsrc.io/). Allows sharing components code between projects. All components are organized on the cloud, made discoverable, and synced to all your projects.
-
----
-
-# Atomic Design ( Brad Frost)
-
-1. Atoms - Are the basic building blocks of matter.
-2. Molecules - Groups of atoms bonded together and are the smallest fundamental units of a compound.
-3. Organisms - Groups of molecules joined together to form a relatively complex, distinct section of an interface.
-4. Templates - Consist mostly of groups of organisms stitched together to form pages.
-5. Pages - Specific instances of templates.
-
----
-
-<Image src="images/atomic-design-basic.png" size="55% 70%"/>
+1. Components promote reusability.
+2. Components can be split UI into small, more manageable parts.
+3. Isolating components and states allow developers to articulate behavior and functionality.
+4. Components can be developed independently using contract specfications.
+5. Component code (including styles) is packaged together to make sharing easier and avoid unused code bloat.
+6. Components can be refactored or replaced.
+7. Style guides, like Storybook or Styleguidist, allow to work on a component in isolation.
+8. [Bit](https://bitsrc.io/). Allows sharing components code between projects. All components are organized on the cloud, made discoverable, and synced to all your projects.
 
 ---
 
@@ -160,15 +117,16 @@ export default Box;
 
 ## - Max Stoiber
 
----
-
-# styled-components Benefits
+<Notes>
+styled-components Benefits
 
 1. Use as as much or as little as you want.
 2. Props instead of classes.
 3. Defining styled components that possess their own encapsulated styles.
 4. Layout and styling in a single component for efficiency.
 5. Highly expressive which makes reading JSX easier (JS + HTML + CSS).
+
+</Notes>
 
 ---
 
@@ -188,9 +146,25 @@ yarn add styled-components
 ---
 
 <CodeSurfer
+  title="Inline Styling"
+  notes="Use ⬆️ and ⬇️ keys"
+  code={require("raw-loader!./snippets/DemoBasicsA.mdxx")}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { notes: "⬇️" },
+    { range: [3, 7], notes: "Style a h1" },
+    { range: [9, 12], notes: "Style a section" },
+    { range: [14, 22], notes: "Use the components" },
+  ]}
+/>
+
+---
+
+<CodeSurfer
   title="Template Literal"
   notes="Use ⬆️ and ⬇️ keys"
-  code={require("raw-loader!./snippets/2a.mdxx")}
+  code={require("raw-loader!./snippets/DemoBasicsB.mdxx")}
   showNumbers={false}
   dark={false}
   steps={[
@@ -198,7 +172,7 @@ yarn add styled-components
     { lines: [2], notes: "Import styled-components" },
     { range: [4, 8], notes: "Style a h1" },
     { range: [10, 13], notes: "Style a section" },
-    { range: [16, 24], notes: "Use the styled components" },
+    { range: [15, 24], notes: "Use the styled components" },
   ]}
 />
 
@@ -207,14 +181,15 @@ yarn add styled-components
 <CodeSurfer
   title="Style Object"
   notes="Use ⬆️ and ⬇️ keys"
-  code={require("raw-loader!./snippets/2b.mdxx")}
+  code={require("raw-loader!./snippets/DemoBasicsC.mdxx")}
   showNumbers={false}
   dark={false}
   steps={[
     { notes: "⬇️" },
     { lines: [2], notes: "Import styled-components" },
     { range: [4, 8], notes: "Style a h1" },
-    { range: [12, 20], notes: "Use the styled components" },
+    { range: [10, 13], notes: "Style a section" },
+    { range: [15, 23], notes: "Use the styled components" },
   ]}
 />
 
@@ -237,7 +212,7 @@ yarn add styled-components
     { lines: [2], notes: "Import styled-components" },
     { range: [4, 8], notes: "Style a h1" },
     { range: [10, 14], notes: "Extend a style" },
-    { range: [22, 31], notes: "Use the styled components" },
+    { range: [21, 31], notes: "Use the styled components" },
   ]}
 />
 
@@ -337,18 +312,24 @@ yarn add styled-components
 
 ---
 
+# Themes
+
+<DemoTheme />
+
+---
+
 <CodeSurfer
   title="Themes"
   notes="Use ⬆️ and ⬇️ keys"
-  code={require("raw-loader!./snippets/DemoClock.mdxx")}
+  code={require("raw-loader!./snippets/DemoTheme.mdxx")}
   showNumbers={false}
   dark={false}
   steps={[
     { notes: "⬇️" },
-    { lines: [2], notes: "Import styled-components" },
-    { range: [6, 12], notes: "Define theme" },
-    { range: [40, 51], notes: "Create styled clock block" },
-    { range: [126, 139], notes: "Use the styled component" },
+    { lines: [2], notes: "Import styled-components (with ThemeProvider)" },
+    { range: [4, 12], notes: "Define themes" },
+    { range: [14, 19], notes: "Create styled component" },
+    { range: [26, 39], notes: "Use the styled components" },
   ]}
 />
 
