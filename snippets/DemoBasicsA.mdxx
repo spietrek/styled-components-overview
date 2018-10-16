@@ -15,7 +15,7 @@ class DemoBasicsA extends Component {
   render() {
     return (
       <section style={sectionStyle}>
-        <h1 style={h1Style}>Welcome to Connect.Tech!</h1>
+        <h1 style={h1Style}>Hello CONNECT.TECH!</h1>
       </section>
     );
   }

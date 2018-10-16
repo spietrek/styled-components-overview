@@ -30,7 +30,6 @@ export default {
   },
   h1: {
     marginBottom: '50px',
-    textTransform: 'uppercase',
     letterSpacing: '0.1em',
     fontWeight: 600,
   },

@@ -22,8 +22,8 @@ class DemoExtend extends Component {
   render() {
     return (
       <StyledWrapper>
-        <StyledTitle>Welcome to Connect.Tech!</StyledTitle>
-        <StyledTitleBold>Welcome to Connect.Tech!</StyledTitleBold>
+        <StyledTitle>Hello CONNECT.TECH!</StyledTitle>
+        <StyledTitleBold>Hello CONNECT.TECH!</StyledTitleBold>
       </StyledWrapper>
     );
   }

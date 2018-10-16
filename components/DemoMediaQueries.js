@@ -33,7 +33,7 @@ class DemoMediaQueries extends Component {
   render() {
     return (
       <StyledWrapper>
-        <StyledTitle>Welcome to Connect.Tech!</StyledTitle>
+        <StyledTitle>Hello CONNECT.TECH!</StyledTitle>
       </StyledWrapper>
     );
   }

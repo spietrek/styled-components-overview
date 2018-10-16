@@ -28,7 +28,7 @@ class DemoTheme extends Component {
     return (
       <ThemeProvider theme={theme}>
         <StyledWrapper>
-          <StyledTitle>Welcome to Connect.Tech!</StyledTitle>
+          <StyledTitle>Hello CONNECT.TECH!</StyledTitle>
           <ThemeProvider theme={invertTheme}>
             <StyledTitle>Inverted Theme</StyledTitle>
           </ThemeProvider>
