@@ -22,6 +22,17 @@ const StyledTitle = styled.h1`
   ${media.tablet`color: white;`} ${media.phone`color: white;`};
 `;
 
+const StyledPrintTitle = styled.h1`
+  font-size: 2.5em;
+  color: red;
+  display: none;
+
+  @media print {
+    color: black;
+    display: block;
+  }
+`;
+
 const StyledWrapper = styled.section`
   padding: 4em;
   background: papayawhip;
@@ -34,6 +45,7 @@ class DemoMediaQueries extends Component {
     return (
       <StyledWrapper>
         <StyledTitle>Hello CONNECT.TECH!</StyledTitle>
+        <StyledPrintTitle>Visible if printed</StyledPrintTitle>
       </StyledWrapper>
     );
   }

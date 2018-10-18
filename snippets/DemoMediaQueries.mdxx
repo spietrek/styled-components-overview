@@ -31,11 +31,23 @@ const StyledWrapper = styled.section`
   ${media.phone`background: palevioletred;`};
 `;
 
+const StyledPrintTitle = styled.h1`
+  font-size: 2.5em;
+  color: red;
+  display: none;
+
+  @media print {
+    color: black;
+    display: block;
+  }
+`;
+
 class DemoMediaQueries extends Component {
   render() {
     return (
       <StyledWrapper>
         <StyledTitle>Hello CONNECT.TECH!</StyledTitle>
+        <StyledPrintTitle>Visible if printed</StyledPrintTitle>
       </StyledWrapper>
     );
   }

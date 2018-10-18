@@ -1,23 +1,34 @@
 import { dark } from 'mdx-deck/themes';
 import nightOwl from 'prism-react-renderer/themes/nightOwl';
 
-const green = '#42ff71';
-
 export default {
   ...dark,
   codeSurfer: {
     ...nightOwl,
-    showNumbers: false,
+    showNumbers: true,
   },
-  font: '"IBM Plex Mono", monospace',
-  monospace: '"IBM Plex Mono", monospace',
+  css: {
+    textAlign: 'center',
+    fontSize: '18px',
+    '@media screen and (min-width:64em)': {
+      fontSize: '34px',
+    },
+    '& .Slide > div': {
+      minWidth: '80vw',
+      minHeight: '60vh',
+    },
+  },
+  // font: '"IBM Plex Mono", monospace',
+  // monospace: '"IBM Plex Mono", monospace',
+  // font: '"Gloria Hallelujah", cursive',
+  font: '"Annie Use Your Telescope", cursive',
   colors: {
     text: '#FFF',
-    background: '#1D1F21',
+    background: 'rgb(1, 22, 39)',
     link: '#0ff',
     pre: '#33F9FF',
     code: '#33F9FF',
-    quote: '#5fb3b3',
+    quote: 'rgb(127, 219, 202)',
   },
   transitionTimingFunction: 'linear',
   transitionDuration: '.5s',
@@ -33,15 +44,12 @@ export default {
     letterSpacing: '0.1em',
     fontWeight: 600,
   },
-  css: {
-    textAlign: 'center',
-    fontSize: '16px',
-    '@media screen and (min-width:64em)': {
-      fontSize: '30px',
-    },
-    '& .Slide > div': {
-      minWidth: '80vw',
-      minHeight: '60vh',
+  table: {
+    fontSize: '50px',
+    td: {
+      fontSize: '46px',
+      opacity: '0.8',
+      paddingRight: '60px',
     },
   },
 };

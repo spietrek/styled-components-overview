@@ -16,15 +16,12 @@ import DemoPolished from './components/DemoPolished'
   <title>Getting Started with styled-components in ReactJS</title>
 </Head>
 
-<Image src="images/qrcode.png" size="55% 90%"/>
+<Image src="images/qrcode.png" size="30%"/>
 
 ---
 
 # What's the big deal? Getting Started with styled-components in ReactJS.
 # &lt; 💅 &gt;
-
-<br />
-
 # @spietrek
 
 ---
@@ -61,25 +58,39 @@ import DemoPolished from './components/DemoPolished'
 
 # CSS Challenges
 
-1. Slow CSS development
-2. Global namespace / Styling conflicts / Specificity
-3. Dead code
-4. Hardly reusable / Site-scoped
+1. Global Namespace
+2. Dependencies
+3. Ordering of CSS
+4. Dead Code Elimination
+5. Reusable Code
+6. Difficult to Scale
 
-### Preprocessors (LESS, Sass, CSS Modules) help, but don't solve all issues.
+<Notes>
+Preprocessors (LESS, Sass, CSS Modules) help, but don't solve all issues.
+</Notes>
 
 ---
 
 # Styling in ReactJS
 
 ## CSS Stylesheet
-## CSS Modules
 ## Inline Styling
+## CSS Modules
 ## CSS-in-JS
+
+<Notes>
+1. BEM, LESS, Sass did not provide true encapsulation. CSS Modules does.
+2. It handles creating dynamic class names to avoid conflicts.
+3. CSS Modules only show you a way of localizing style definitions: a clever way of automating BEM so you don’t need to think about chosing a class name ever again (or at least think about it less).
+</Notes>
 
 ---
 
-> "CSS-in-JS" refers to a pattern where CSS is composed using JavaScript instead of defined in external files.
+> Which ever technology (SASS, Less, BEM, CSS Modules, CSS-in-JS) you choose, there is no substitute for a well-defined styling architecture.
+
+---
+
+> CSS-in-JS refers to a pattern where CSS is composed using JavaScript instead of defined in external files.
 
 <br />
 
@@ -87,40 +98,43 @@ import DemoPolished from './components/DemoPolished'
 
 ---
 
-# CSS vs. CSS-in-JS
-
 | CSS Challenges | CSS-in-JS Benefits |
 | ----------------| ------------- |
-| CSS development too slow | Full CSS support. Themes. Editor syntax highlighting. Automatic vendor prefixing. |
-| Global namespace / Styling conflicts / Specificity | Scoped styles without selectors. Unique class names are created to avoid collisions. Two style definitions for one element can be used to avoid specificity conflicts. |
-| Dead code | Linters can show unused code. |
-| Hardly reusable / Site-scoped | CSS is defined in *components* which can be reused. |
+| Global Namespace | Unique class names are automatically created to avoid collisions |
+| Dependencies | CSS is encapsulated |
+| Ordering of CSS | No issues with order |
+| Dead Code | Linters can show unused code |
+| Reusable Code | CSS is defined in *components* which can be reused |
+| Difficult to Scale | Break code (including CSS) down into components |
 
 ---
 
 # Component Based Design
 
-1. Promote reusability.
-2. Split UI into small, more manageable parts.
-3. Allow developers to articulate behavior and functionality.
-4. Developed independently using contract specfications.
-5. Code (including styles) is packaged together.
-6. Refactored or replaced.
+1. Aka Component Driven Development
+2. Promote reusability
+3. Split UI into small, more manageable parts
+4. Focused development
+5. Developed independently using contract specfications
+6. Code (including styles) is packaged together
+7. Targeted feedback
+8. Refactored or replaced
+
+<Notes>
+Allow developers to articulate behavior and functionality.
+</Notes>
 
 ---
 
 # Design Systems
 
-1. Style guides, like Storybook or Styleguidist, allow to work on a component in isolation.
-2. [Bit](https://bitsrc.io/). Allows sharing components code between projects. All components are organized on the cloud, made discoverable, and synced to all your projects.
+1. Pattern Libraries can be used to style components using Atomic Design.
+2. Style guides, like Storybook or Styleguidist, allow to work on a component, including business logic and tests, in isolation.
+3. [Bit](https://bitsrc.io/) allows sharing component code between projects where components are stored on the cloud.
 
 ---
 
-> The basic idea of styled-components is to enforce best practices by removing the mapping between styles and components.
-
-<br />
-
-## - Max Stoiber (styled-components creator)
+<Image src="images/styled-components.png" size="30%"/>
 
 <Notes>
 styled-components Benefits
@@ -135,10 +149,15 @@ styled-components Benefits
 
 ---
 
-# Installation
+# Install as Dependency
 
 ```
 npm install styled-components
+```
+
+<br />
+
+```
 yarn add styled-components
 ```
 
@@ -177,7 +196,7 @@ yarn add styled-components
     { lines: [2], notes: "Import styled-components" },
     { range: [4, 8], notes: "Style a h1" },
     { range: [10, 13], notes: "Style a section" },
-    { range: [15, 24], notes: "Use the styled components" },
+    { range: [15, 23], notes: "Use the styled components" },
   ]}
 />
 
@@ -217,7 +236,7 @@ yarn add styled-components
     { lines: [2], notes: "Import styled-components" },
     { range: [4, 8], notes: "Style a h1" },
     { range: [10, 14], notes: "Extend a style" },
-    { range: [21, 31], notes: "Use the styled components" },
+    { range: [21, 30], notes: "Use the styled components" },
   ]}
 />
 
@@ -280,14 +299,15 @@ yarn add styled-components
   notes="Use ⬆️ and ⬇️ keys"
   code={require("raw-loader!./snippets/DemoMediaQueries.mdxx")}
   showNumbers={false}
-  dark={true}
+  dark={false}
   steps={[
     { notes: "⬇️" },
     { lines: [2], notes: "Import styled-components" },
     { range: [4, 7], notes: "Set media query sizes" },
     { range: [9, 16], notes: "Create tagged literals for wrapping media queries" },
-    { range: [18, 33], notes: "Set appropriate colors using media queries" },
-    { range: [34, 42], notes: "Use the styled components" },
+    { range: [18, 32], notes: "Set appropriate colors using media queries" },
+    { range: [34, 43], notes: "Only show component on print" },
+    { range: [45, 54], notes: "Use the styled components" },
   ]}
 />
 
@@ -309,9 +329,9 @@ yarn add styled-components
     { notes: "⬇️" },
     { lines: [2], notes: "Import styled-components" },
     { range: [75, 84], notes: "Set component state" },
-    { range: [59, 70], notes: "Style button" },
+    { range: [59, 69], notes: "Style button" },
     { range: [163, 174], notes: "Use the styled components" },
-    { range: [87, 91], notes: "Update component state" },
+    { range: [87, 90], notes: "Update component state" },
   ]}
 />
 
@@ -390,11 +410,11 @@ yarn add styled-components
   steps={[
     { notes: "⬇️" },
     { lines: [3], notes: "Import Polished" },
-    { range: [5, 8], notes: "Define base style" },
-    { range: [10, 12], notes: "Lighten text example" },
-    { range: [14, 16], notes: "Ellipsis text example" },
-    { range: [18, 20], notes: "Word wrap text example" },
-    { range: [28, 45], notes: "Use the styled components" },
+    { range: [5, 10], notes: "Define base style" },
+    { range: [12, 14], notes: "Lighten text example" },
+    { range: [16, 18], notes: "Ellipsis text example" },
+    { range: [20, 23], notes: "Word wrap text example" },
+    { range: [30, 47], notes: "Use the styled components" },
   ]}
 />
 
@@ -418,6 +438,26 @@ yarn add styled-components
 * Reakit
 * React CSS loaders and Styled loaders
 * Styled icons
+
+---
+
+# styled-components V4
+
+* Smaller and much, much faster
+* A refreshed createGlobalStyle API, replacing the old injectGlobal
+* Support for the "as" prop, a dynamic alternative to .withComponent
+* Removal of Comp.extend in favor of unifying styled(Comp)
+* Full StrictMode compliance for React v16
+* Native support for ref on any styled component
+
+<Notes>
+1. You can nest rules (pseudo selectors, media queries, parent components).
+2. Integrate existing CSS frameworks using .attrs.
+3. Use .attrs to ensure every instance of a style component has the same props.
+4. If needed, you can override specificity using &&& (not important).
+5. Override inline using &[style] {}.
+6. Browsers: v2.x IE9+, v3.x IE9+, v4.x IE11 (IE9+ with Map + Set polyfills) -> all evergreen browsers
+</Notes>
 
 ---
 

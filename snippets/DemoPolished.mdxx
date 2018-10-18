@@ -5,6 +5,8 @@ import { lighten, ellipsis, wordWrap } from 'polished';
 const StyledRedTitle = styled.h3`
   text-align: center;
   color: #ff0000;
+  padding: 10px;
+  margin: 0;
 `;
 
 const StyledLighterRedTitle = styled(StyledRedTitle)`
