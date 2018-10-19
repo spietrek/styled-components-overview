@@ -9,10 +9,7 @@ export default {
   },
   css: {
     textAlign: 'center',
-    fontSize: '18px',
-    '@media screen and (min-width:64em)': {
-      fontSize: '34px',
-    },
+    fontSize: '1.8em',
     '& .Slide > div': {
       minWidth: '80vw',
       minHeight: '60vh',
@@ -45,9 +42,9 @@ export default {
     fontWeight: 600,
   },
   table: {
-    fontSize: '50px',
+    fontSize: '2.5rem',
     td: {
-      fontSize: '46px',
+      fontSize: '2.3rem',
       opacity: '0.8',
       paddingRight: '60px',
     },

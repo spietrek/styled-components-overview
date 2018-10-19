@@ -45,7 +45,7 @@ class DemoMediaQueries extends Component {
     return (
       <StyledWrapper>
         <StyledTitle>Hello CONNECT.TECH!</StyledTitle>
-        <StyledPrintTitle>Visible if printed</StyledPrintTitle>
+        <StyledPrintTitle>Today's Date</StyledPrintTitle>
       </StyledWrapper>
     );
   }

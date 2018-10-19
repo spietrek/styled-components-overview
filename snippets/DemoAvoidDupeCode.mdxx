@@ -10,7 +10,7 @@ import {
 
 const StyledSidebar = styled.section`
   width: 230px;
-  height: 230px;
+  height: 450px;
   background-color: #3f6695;
   font-size: 24px;
   overflow: hidden;

@@ -23,18 +23,18 @@ const StyledContainer = styled.div`
   justify-content: center;
 `;
 
-const rotate360 = keyframes`
-  from {
-    transform: rotate(0deg);
+const wobble = keyframes`
+  33% {
+    transform: translateX(-50px);
   }
 
-  to {
-    transform: rotate(360deg);
+  66% {
+    transform: translateX(50px);
   }
 `;
 
 const animationMixin = css`
-  animation: ${rotate360} 5s linear infinite;
+  animation: ${wobble} 5s linear infinite;
 `;
 
 const StyledTimeBlock = styled.div`

@@ -86,10 +86,6 @@ Preprocessors (LESS, Sass, CSS Modules) help, but don't solve all issues.
 
 ---
 
-> Which ever technology (SASS, Less, BEM, CSS Modules, CSS-in-JS) you choose, there is no substitute for a well-defined styling architecture.
-
----
-
 > CSS-in-JS refers to a pattern where CSS is composed using JavaScript instead of defined in external files.
 
 <br />
@@ -104,7 +100,7 @@ Preprocessors (LESS, Sass, CSS Modules) help, but don't solve all issues.
 | Dependencies | CSS is encapsulated |
 | Ordering of CSS | Source order independence |
 | Dead Code | Linters can show unused code |
-| Reusable Code | Separate JS modules can be created for usability |
+| Reusable Code | Separate JS modules can be created for reusability |
 | Difficult to Scale | Break code (including CSS) down into components |
 
 ---
@@ -129,8 +125,12 @@ Allow developers to articulate behavior and functionality.
 # Design Systems
 
 1. Pattern Libraries can be used to style components using Atomic Design.
-2. Style guides, like Storybook or Styleguidist, allow to work on a component, including business logic and tests, in isolation.
+2. Style guides, like Storybook or Styleguidist, allow focused work on a component, including business logic and tests, in isolation.
 3. [Bit](https://bitsrc.io/) allows sharing component code between projects where components are stored on the cloud.
+
+---
+
+> Which ever technology (Sass, LESS, BEM, CSS Modules, CSS-in-JS) you choose, there is no substitute for a well-defined styling architecture.
 
 ---
 
@@ -144,6 +144,7 @@ styled-components Benefits
 3. Defining styled components that possess their own encapsulated styles.
 4. Layout and styling in a single component for efficiency.
 5. Highly expressive which makes reading JSX easier (JS + HTML + CSS).
+
 </Notes>
 
 ---
@@ -198,6 +199,10 @@ yarn add styled-components
     { range: [15, 23], notes: "Use the styled components" },
   ]}
 />
+
+<Notes>
+It removes the mapping between components and styles. This means that when you're defining your styles, you're actually creating a normal React component, that has your styles attached to it.
+</Notes>
 
 ---
 
@@ -374,6 +379,7 @@ yarn add styled-components
   steps={[
     { notes: "⬇️" },
     { lines: [2], notes: "Import styled-components" },
+    { range: [75, 84], notes: "Set component state" },
     { range: [26, 34], notes: "Create keyframes style" },
     { range: [36, 38], notes: "Create animation mixin" },
     { range: [40, 51], notes: "Create styled clock block" },
@@ -426,20 +432,6 @@ yarn add styled-components
 
 ---
 
-# 9 Styled-Components UI Libraries
-
-* Rebass
-* Zendesk’s Garden React components
-* Atlaskit
-* Grommet V2
-* Smooth-UI
-* Reactackle
-* Reakit
-* React CSS loaders and Styled loaders
-* Styled icons
-
----
-
 # styled-components V4
 
 * Smaller and much, much faster
@@ -448,7 +440,7 @@ yarn add styled-components
 * Removal of Comp.extend in favor of unifying styled(Comp)
 * Full StrictMode compliance for React v16
 * Native support for ref on any styled component
-* Babel plugin for better naming - <button class="Button-asdf123 asdf123" /> instead of <button class="asdf123" />
+* Babel plugin for better naming (class="Button-asdf123 asdf123" instead of class="asdf123")
 
 <Notes>
 1. You can nest rules (pseudo selectors, media queries, parent components).
