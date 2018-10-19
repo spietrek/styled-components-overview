@@ -102,9 +102,9 @@ Preprocessors (LESS, Sass, CSS Modules) help, but don't solve all issues.
 | ----------------| ------------- |
 | Global Namespace | Unique class names are automatically created to avoid collisions |
 | Dependencies | CSS is encapsulated |
-| Ordering of CSS | No issues with order |
+| Ordering of CSS | Source order independence |
 | Dead Code | Linters can show unused code |
-| Reusable Code | CSS is defined in *components* which can be reused |
+| Reusable Code | Separate JS modules can be created for usability |
 | Difficult to Scale | Break code (including CSS) down into components |
 
 ---
@@ -144,7 +144,6 @@ styled-components Benefits
 3. Defining styled components that possess their own encapsulated styles.
 4. Layout and styling in a single component for efficiency.
 5. Highly expressive which makes reading JSX easier (JS + HTML + CSS).
-
 </Notes>
 
 ---
@@ -449,6 +448,7 @@ yarn add styled-components
 * Removal of Comp.extend in favor of unifying styled(Comp)
 * Full StrictMode compliance for React v16
 * Native support for ref on any styled component
+* Babel plugin for better naming - <button class="Button-asdf123 asdf123" /> instead of <button class="asdf123" />
 
 <Notes>
 1. You can nest rules (pseudo selectors, media queries, parent components).
